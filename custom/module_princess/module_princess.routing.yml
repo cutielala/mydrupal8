@@ -1,0 +1,8 @@
+module_princess.princessList:
+    path: '/princessList'
+    defaults:
+     _controller: '\Drupal\module_princess\Controller\PrincessController::princessList'
+     _title: 'disney princess list'
+    requirements:
+      _permission: 'access content'
+          
