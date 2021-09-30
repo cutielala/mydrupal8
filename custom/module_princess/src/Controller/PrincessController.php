@@ -3,10 +3,10 @@
 namespace Drupal\module_princess\Controller;
 
 
-use Drupal\core\Controller\ControllerBase;
+use Drupal\Core\Controller\ControllerBase;
 
 
-class PrincessController {
+class PrincessController extends ControllerBase {
 	
      public function princessList(){
 		 
@@ -35,7 +35,7 @@ class PrincessController {
 	 }		 
      return [
 	    '#type' => 'markup',
-		'#markup' => '<ol>'.$thePricess.'</ol>',
+		'#markup' => '<h2>'.$this->t('these are Disney princess').'</h2><br/><ol>'.$thePricess.'</ol>',
 	 
 	 ];
 }
