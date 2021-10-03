@@ -28,15 +28,11 @@ class PrincessController extends ControllerBase {
    ];
 
 
-     $thePricess = '';
-	 foreach($princess as $p){
-	     $thePricess .= '<li>' .$p['name']. '</li>';
-	 
-	 }		 
+     		 
      return [
-	    '#type' => 'markup',
-		'#markup' => '<h2>'.$this->t('these are Disney princess').'</h2><br/><ol>'.$thePricess.'</ol>',
-	 
+	   '#theme' => 'princess_list',
+	   '#items' => $princess,
+       '#title' => $this -> t('Our princesses have arrived')
 	 ];
 }
 }
