@@ -21,3 +21,11 @@ module_princess.exampleform:
      _title: 'Viola ExampleForm- Showcase some element'
     requirements:
       _permission: 'access content'
+
+module_princess.ajaxprincessform:
+    path: '/ajax-form'
+    defaults:
+     _form: '\Drupal\module_princess\Form\AjaxPrincessForm'
+     _title: 'Viola Ajax Form is here'
+    requirements:
+      _permission: 'access content'

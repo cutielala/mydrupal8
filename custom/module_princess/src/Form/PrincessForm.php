@@ -50,5 +50,14 @@ class PrincessForm extends FormBase {
     
         );
     }
-  
+    public function validateForm(array &$form, FormStateInterface $form_state) {
+     
+      if (empty($form_state->getValue('c_1'))) {
+    
+        // Set an error for the form element with a key of "title".
+        $form_state
+          ->setErrorByName('title', $this
+          ->t('Please specify Candidate 1'));
+      }
+    }
 }

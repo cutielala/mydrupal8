@@ -24,6 +24,15 @@ function module_princess_form_alter(&$form, \Drupal\Core\Form\FormStateInterface
 		$form['field_tags']['#access'] = FALSE;
 		$form['title']['widget'][0]['value']['#title'] = t('Viola Article Title');
        // kint($form);die();
+	   $form['#validate'][] = '_module_p_articale_valid'; //create a function 
+	}
+}
+/**
+ * Our custom validation function.
+ */
+function _module_p_articale_valid($form,$form_state){
+	if(is_numeric($form_state -> getValue('title')[0]['value'])){
+           $form_state->setErrorByName('title',t('Title should not be a number!'));
 	}
 }
 
