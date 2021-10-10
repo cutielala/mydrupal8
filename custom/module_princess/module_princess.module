@@ -15,7 +15,16 @@ function module_princess_theme($existing, $type, $theme, $path){
 		]
 	];
 }
+/**
+ *  Implementing hook_form
+*/
+function module_princess_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	if($form_id == 'node_article_form'){
 
-
+		$form['field_tags']['#access'] = FALSE;
+		$form['title']['widget'][0]['value']['#title'] = t('Viola Article Title');
+       // kint($form);die();
+	}
+}
 
 
