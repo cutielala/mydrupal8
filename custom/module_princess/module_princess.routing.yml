@@ -13,3 +13,11 @@ module_princess.princessform:
      _title: 'Who wil Win form'
     requirements:
       _permission: 'access content'
+
+module_princess.exampleform:
+    path: '/example-form'
+    defaults:
+     _form: '\Drupal\module_princess\Form\ExampleForm'
+     _title: 'Viola ExampleForm- Showcase some element'
+    requirements:
+      _permission: 'access content'
