@@ -4,12 +4,27 @@ namespace Drupal\module_princess\Controller;
 
 
 use Drupal\Core\Controller\ControllerBase;
-
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\module_princess\PrincessArticleService;
 
 class PrincessController extends ControllerBase {
 	
+    private $ArticlePrincessS;
+
+	public static function create(ContainerInterface $container) {
+		return new static(
+			$container->get('module_princess.princess_article')
+		);
+	}
+	public function __construct(PrincessArticleService $ArticlePrincessS ){
+        $this->ArticlePrincessS = $ArticlePrincessS;
+
+    }
      public function princessList(){
 		 
+
+		kint($this->ArticlePrincessS->getPrincessArticles()); die();
+
 		 $princess = [
 		 
 		  ['name' => 'Snow White'],
