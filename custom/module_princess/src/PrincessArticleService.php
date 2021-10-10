@@ -20,11 +20,11 @@ use Drupal\Core\Entity\EntityManager;
     }
 
      public function getPrincessArticles(){
-        // $articles = [ '"Snow White" is a 19th-century German fairy tale that is today known widely across the Western world.'  , '“Beauty and the Beast” is the fantastic journey of Belle, a bright, beautiful and independent young woman who is taken prisoner by a beast in his castle.' ];
- 
-         kint($this->entityQuery->get('node')->condition('type' , 'article')->execute() );
-         kint($this->entityManager->getStorage('node')->loadMultiple());
-         return $articles;
+
+         $articlesNids = $this->entityQuery->get('node')->condition('type' , 'article')->execute();
+           return $this->entityManager->getStorage('node')->loadMultiple($articlesNids);
+         
+         
      }
       
  }
