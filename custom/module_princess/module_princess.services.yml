@@ -3,4 +3,5 @@ services:
   # Defines a simple service which requires no parameter for its constructor.
   module_princess.princess_article:
     class: Drupal\module_princess\PrincessArticleService
+    arguments: ['@entity.query']
 
