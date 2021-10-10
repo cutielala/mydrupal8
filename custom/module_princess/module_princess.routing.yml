@@ -6,3 +6,10 @@ module_princess.princessList:
     requirements:
       _permission: 'access content'
           
+module_princess.princessform:
+    path: '/princess-form'
+    defaults:
+     _form: '\Drupal\module_princess\Form\PrincessForm'
+     _title: 'Who wil Win form'
+    requirements:
+      _permission: 'access content'
