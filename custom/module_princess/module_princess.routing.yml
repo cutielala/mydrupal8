@@ -26,6 +26,14 @@ module_princess.ajaxprincessform:
     path: '/ajax-form'
     defaults:
      _form: '\Drupal\module_princess\Form\AjaxPrincessForm'
-     _title: 'Viola Ajax Form is here'
+     _title: 'Viola Ajax Form battle'
     requirements:
       _permission: 'access content'
+
+module_princess.princessconfigform:
+    path: '/admin/princess'
+    defaults:
+     _form: '\Drupal\module_princess\Form\PrincessConfigForm'
+     _title: 'Viola admin Config Form is here'
+    requirements:
+      _permission: 'administer site configuration'
