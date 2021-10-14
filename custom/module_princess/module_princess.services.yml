@@ -4,3 +4,8 @@ services:
     class: Drupal\module_princess\PrincessArticleService
     arguments: ['@entity.query','@entity.manager']
 
+  module_princess.princess_init_subscriber:
+    class: Drupal\module_princess\EventSubscriber\PrincessInitSubscriber
+    tags: 
+      - { name: 'event_subscriber'}
+
